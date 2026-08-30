@@ -73,9 +73,9 @@ export function Footer() {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2.5 text-[#25D366] transition-colors hover:text-[#20BA5A]"
+                  className="inline-flex items-center gap-2.5 text-primary-foreground/80 transition-colors hover:text-accent"
                 >
-                  <MessageCircle className="size-4 shrink-0" aria-hidden="true" />
+                  <MessageCircle className="size-4 shrink-0 text-[#25D366]" aria-hidden="true" />
                   <span dir="ltr">WhatsApp {PHONE_DISPLAY}</span>
                 </a>
               </li>

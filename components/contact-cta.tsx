@@ -31,9 +31,9 @@ export function ContactCTA() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] hover:bg-[#20BA5A] px-6 py-3.5 text-base font-semibold text-white transition-all duration-200 hover:scale-[1.03]"
+            className="inline-flex items-center justify-center gap-2 rounded-full border border-accent-foreground/40 px-6 py-3.5 text-base font-semibold text-accent-foreground transition-colors hover:bg-accent-foreground/10"
           >
-            <MessageCircle className="size-5" aria-hidden="true" />
+            <MessageCircle className="size-5 text-[#25D366]" aria-hidden="true" />
             {t.cta.whatsapp}
           </a>
           <a

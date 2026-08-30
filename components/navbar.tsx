@@ -110,9 +110,9 @@ export function Navbar() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden items-center gap-2 rounded-full bg-[#25D366] hover:bg-[#20BA5A] px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:scale-[1.03] md:inline-flex"
+            className="hidden items-center gap-2 rounded-full border border-background/30 bg-background/10 px-4 py-2 text-sm font-semibold text-background backdrop-blur-sm transition-colors hover:bg-background/20 md:inline-flex"
           >
-            <MessageCircle className="size-4" aria-hidden="true" />
+            <MessageCircle className="size-4 text-[#25D366]" aria-hidden="true" />
             {t.nav.quote}
           </a>
 
@@ -161,9 +161,9 @@ export function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={close}
-              className="inline-flex items-center gap-2 rounded-full bg-[#25D366] hover:bg-[#20BA5A] px-4 py-2.5 text-sm font-semibold text-white transition-colors duration-200"
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2.5 text-sm font-semibold text-foreground transition-colors duration-200 hover:bg-card/80"
             >
-              <MessageCircle className="size-4" aria-hidden="true" />
+              <MessageCircle className="size-4 text-[#25D366]" aria-hidden="true" />
               {t.nav.quote}
             </a>
           </div>

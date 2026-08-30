@@ -49,10 +49,10 @@ export function Hero() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] hover:bg-[#20BA5A] px-6 py-3.5 text-base font-semibold text-white transition-all duration-200 hover:shadow-lg hover:scale-[1.05] active:scale-95"
+              className="group inline-flex items-center justify-center gap-2 rounded-full border border-background/30 bg-background/10 px-6 py-3.5 text-base font-semibold text-background backdrop-blur-sm transition-colors hover:bg-background/20"
             >
               <MessageCircle
-                className="size-5"
+                className="size-5 text-[#25D366]"
                 aria-hidden="true"
               />
               {t.hero.whatsapp}

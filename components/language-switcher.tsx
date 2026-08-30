@@ -10,7 +10,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "inline-flex items-center gap-0.5 rounded-full border border-border bg-card/60 p-0.5 text-sm",
+        "inline-flex items-center gap-1 rounded-lg border-2 border-accent/30 bg-accent/5 p-1 text-sm transition-all hover:border-accent/50",
         className,
       )}
       role="group"
@@ -26,10 +26,10 @@ export function LanguageSwitcher({ className }: { className?: string }) {
             aria-pressed={active}
             lang={code}
             className={cn(
-              "rounded-full px-3 py-1.5 font-medium transition-colors",
+              "rounded-md px-4 py-2 font-medium transition-all duration-200 text-sm",
               active
-                ? "bg-primary text-primary-foreground"
-                : "text-muted-foreground hover:text-foreground",
+                ? "bg-accent text-accent-foreground shadow-md scale-105"
+                : "text-foreground/70 hover:text-foreground bg-transparent",
             )}
           >
             {label}

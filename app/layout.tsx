@@ -1,6 +1,6 @@
 import { Analytics } from "@vercel/analytics/next"
 import type { Metadata, Viewport } from "next"
-import { Manrope, IBM_Plex_Sans_Arabic } from "next/font/google"
+import { Manrope, IBM_Plex_Sans_Arabic, Noto_Naskh_Arabic } from "next/font/google"
 import { LanguageProvider } from "@/components/language-provider"
 import "./globals.css"
 
@@ -14,6 +14,13 @@ const plexArabic = IBM_Plex_Sans_Arabic({
   subsets: ["arabic"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-arabic",
+  display: "swap",
+})
+
+const notoNaskhArabic = Noto_Naskh_Arabic({
+  subsets: ["arabic"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-arabic-noto",
   display: "swap",
 })
 
@@ -101,9 +108,9 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="ur"
+      lang="ar"
       dir="rtl"
-      className={`light bg-background ${manrope.variable} ${plexArabic.variable}`}
+      className={`light bg-background ${manrope.variable} ${plexArabic.variable} ${notoNaskhArabic.variable}`}
       suppressHydrationWarning
     >
       <body className="font-sans antialiased">

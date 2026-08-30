@@ -101,14 +101,16 @@ export function Navbar() {
           <LanguageSwitcher
             className={cn(
               "hidden sm:inline-flex",
-              scrolled ? "" : "border-background/30 bg-background/10 text-background",
+              scrolled 
+                ? "border-accent/30 bg-accent/5" 
+                : "border-background/40 bg-background/20",
             )}
           />
           <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden items-center gap-2 rounded-full bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground transition-transform hover:scale-[1.03] md:inline-flex"
+            className="hidden items-center gap-2 rounded-full bg-[#25D366] hover:bg-[#20BA5A] px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:scale-[1.03] md:inline-flex"
           >
             <MessageCircle className="size-4" aria-hidden="true" />
             {t.nav.quote}
@@ -159,7 +161,7 @@ export function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={close}
-              className="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-2.5 text-sm font-semibold text-accent-foreground"
+              className="inline-flex items-center gap-2 rounded-full bg-[#25D366] hover:bg-[#20BA5A] px-4 py-2.5 text-sm font-semibold text-white transition-colors duration-200"
             >
               <MessageCircle className="size-4" aria-hidden="true" />
               {t.nav.quote}

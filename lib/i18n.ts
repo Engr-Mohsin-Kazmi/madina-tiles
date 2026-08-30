@@ -1,7 +1,7 @@
 export type Locale = "ur" | "ar" | "en"
 
-export const LOCALES: Locale[] = ["ur", "ar", "en"]
-export const DEFAULT_LOCALE: Locale = "ur"
+export const LOCALES: Locale[] = ["ar", "en", "ur"]
+export const DEFAULT_LOCALE: Locale = "ar"
 
 export const DIRECTION: Record<Locale, "rtl" | "ltr"> = {
   ur: "rtl",
@@ -20,9 +20,9 @@ export const PHONE_TEL = "+966599082520"
 export const WHATSAPP_URL = "https://wa.me/966599082520"
 
 export const LANGUAGE_LABELS: { locale: Locale; label: string }[] = [
-  { locale: "ur", label: "اردو" },
   { locale: "ar", label: "العربية" },
   { locale: "en", label: "English" },
+  { locale: "ur", label: "اردو" },
 ]
 
 type ServiceKey =

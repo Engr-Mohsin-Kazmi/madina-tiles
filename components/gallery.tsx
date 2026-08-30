@@ -54,7 +54,46 @@ export function Gallery() {
           </p>
         </Reveal>
 
-        <Reveal className="mt-12">
+        {/* Mobile: Horizontal scroll gallery */}
+        <Reveal className="mt-12 block md:hidden">
+          <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
+            {images.map((img, i) => (
+              <button
+                key={GALLERY[i].key}
+                type="button"
+                onClick={() => setActive(i)}
+                className="group relative flex-shrink-0 w-full max-w-xs h-72 overflow-hidden rounded-xl border border-border focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 snap-center"
+                aria-label={img.alt}
+              >
+                <Image
+                  src={img.src || "/placeholder.svg"}
+                  alt={img.alt}
+                  fill
+                  sizes="(max-width: 640px) 90vw, 400px"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                  loading={i < 4 ? "eager" : "lazy"}
+                />
+                <span className="absolute inset-0 bg-gradient-to-t from-[rgba(20,18,16,0.55)] via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <span className="absolute bottom-3 start-3 flex items-center gap-2 text-sm font-medium text-background opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <Expand className="size-4" aria-hidden="true" />
+                  {img.alt}
+                </span>
+              </button>
+            ))}
+          </div>
+          <style jsx>{`
+            .scrollbar-hide {
+              -ms-overflow-style: none;
+              scrollbar-width: none;
+            }
+            .scrollbar-hide::-webkit-scrollbar {
+              display: none;
+            }
+          `}</style>
+        </Reveal>
+
+        {/* Desktop: Column layout */}
+        <Reveal className="mt-12 hidden md:block">
           <div className="[column-fill:_balance] gap-4 sm:columns-2 lg:columns-3">
             {images.map((img, i) => (
               <button
@@ -71,6 +110,7 @@ export function Gallery() {
                   height={i % 3 === 0 ? 1000 : 640}
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                  loading={i < 6 ? "eager" : "lazy"}
                 />
                 <span className="absolute inset-0 bg-gradient-to-t from-[rgba(20,18,16,0.55)] via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 <span className="absolute bottom-3 start-3 flex items-center gap-2 text-sm font-medium text-background opacity-0 transition-opacity duration-300 group-hover:opacity-100">

@@ -46,9 +46,9 @@ export function ContactSection() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col items-center gap-3 rounded-xl border border-border bg-card p-6 text-center transition-colors hover:border-accent/50"
+            className="flex flex-col items-center gap-3 rounded-xl border border-[#25D366]/30 bg-[#25D366]/5 p-6 text-center transition-all duration-200 hover:border-[#25D366]/50 hover:bg-[#25D366]/10"
           >
-            <span className="grid size-12 place-items-center rounded-full bg-accent/10 text-accent">
+            <span className="grid size-12 place-items-center rounded-full bg-[#25D366]/20 text-[#25D366]">
               <MessageCircle className="size-6" aria-hidden="true" />
             </span>
             <span className="text-sm font-medium text-muted-foreground">
@@ -75,20 +75,20 @@ export function ContactSection() {
 
         <div className="mx-auto mt-8 flex max-w-md flex-col gap-3 sm:flex-row">
           <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-[#25D366] hover:bg-[#20BA5A] px-6 py-3.5 text-base font-semibold text-white transition-all duration-200 hover:scale-[1.02]"
+          >
+            <MessageCircle className="size-5" aria-hidden="true" />
+            {t.contact.whatsapp}
+          </a>
+          <a
             href={`tel:${PHONE_TEL}`}
             className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-primary px-6 py-3.5 text-base font-semibold text-primary-foreground transition-transform hover:scale-[1.02]"
           >
             <Phone className="size-5" aria-hidden="true" />
             {t.contact.call}
-          </a>
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-accent px-6 py-3.5 text-base font-semibold text-accent-foreground transition-transform hover:scale-[1.02]"
-          >
-            <MessageCircle className="size-5" aria-hidden="true" />
-            {t.contact.whatsapp}
           </a>
         </div>
       </div>

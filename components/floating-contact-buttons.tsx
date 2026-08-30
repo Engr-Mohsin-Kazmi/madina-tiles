@@ -15,17 +15,17 @@ export function FloatingContactButtons() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label={t.floating.whatsapp}
-        className="fixed bottom-6 end-6 z-40 hidden size-14 place-items-center rounded-full bg-accent text-accent-foreground shadow-lg transition-transform hover:scale-110 md:grid"
+        className="fixed bottom-6 end-6 z-40 hidden size-14 place-items-center rounded-full bg-[#25D366] hover:bg-[#20BA5A] text-white shadow-lg transition-all duration-200 hover:scale-110 active:scale-95 md:grid"
       >
         <MessageCircle className="size-7" aria-hidden="true" />
-        <span className="absolute inset-0 -z-10 animate-ping rounded-full bg-accent/40" />
+        <span className="absolute inset-0 -z-10 animate-pulse rounded-full bg-[#25D366]/40" />
       </a>
 
       {/* Mobile bottom sticky bar */}
       <div className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-2 border-t border-border bg-background/95 backdrop-blur-md md:hidden">
         <a
           href={`tel:${PHONE_TEL}`}
-          className="flex items-center justify-center gap-2 py-3.5 text-sm font-semibold text-foreground"
+          className="flex items-center justify-center gap-2 py-3.5 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
         >
           <Phone className="size-5 text-accent" aria-hidden="true" />
           {t.floating.call}
@@ -34,7 +34,7 @@ export function FloatingContactButtons() {
           href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 bg-accent py-3.5 text-sm font-semibold text-accent-foreground"
+          className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20BA5A] py-3.5 text-sm font-semibold text-white transition-colors duration-200"
         >
           <MessageCircle className="size-5" aria-hidden="true" />
           {t.floating.whatsapp}

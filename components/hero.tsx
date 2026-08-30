@@ -46,8 +46,20 @@ export function Hero() {
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] hover:bg-[#20BA5A] px-6 py-3.5 text-base font-semibold text-white transition-all duration-200 hover:shadow-lg hover:scale-[1.05] active:scale-95"
+            >
+              <MessageCircle
+                className="size-5"
+                aria-hidden="true"
+              />
+              {t.hero.whatsapp}
+            </a>
+            <a
               href="#contact"
-              className="group inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3.5 text-base font-semibold text-accent-foreground transition-transform hover:scale-[1.03]"
+              className="group inline-flex items-center justify-center gap-2 rounded-full border border-background/30 bg-background/10 px-6 py-3.5 text-base font-semibold text-background backdrop-blur-sm transition-colors hover:bg-background/20"
             >
               {t.hero.quote}
               <ArrowIcon
@@ -56,15 +68,6 @@ export function Hero() {
                 }`}
                 aria-hidden="true"
               />
-            </a>
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-background/30 bg-background/10 px-6 py-3.5 text-base font-semibold text-background backdrop-blur-sm transition-colors hover:bg-background/20"
-            >
-              <MessageCircle className="size-5" aria-hidden="true" />
-              {t.hero.whatsapp}
             </a>
           </div>
 

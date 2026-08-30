@@ -28,20 +28,20 @@ export function ContactCTA() {
         </p>
         <div className="mt-8 flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
           <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] hover:bg-[#20BA5A] px-6 py-3.5 text-base font-semibold text-white transition-all duration-200 hover:scale-[1.03]"
+          >
+            <MessageCircle className="size-5" aria-hidden="true" />
+            {t.cta.whatsapp}
+          </a>
+          <a
             href={`tel:${PHONE_TEL}`}
             className="inline-flex items-center justify-center gap-2 rounded-full bg-accent-foreground px-6 py-3.5 text-base font-semibold text-accent transition-transform hover:scale-[1.03]"
           >
             <Phone className="size-5" aria-hidden="true" />
             {t.cta.call}
-          </a>
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-accent-foreground/40 px-6 py-3.5 text-base font-semibold text-accent-foreground transition-colors hover:bg-accent-foreground/10"
-          >
-            <MessageCircle className="size-5" aria-hidden="true" />
-            {t.cta.whatsapp}
           </a>
         </div>
       </Reveal>

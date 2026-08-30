@@ -1,7 +1,8 @@
 "use client"
 
-import { Phone, MessageCircle } from "lucide-react"
+import { Phone } from "lucide-react"
 import { useLanguage } from "@/components/language-provider"
+import { WhatsAppIcon } from "@/components/whatsapp-icon"
 import { Reveal } from "@/components/reveal"
 import { PHONE_TEL, WHATSAPP_URL } from "@/lib/i18n"
 
@@ -33,7 +34,7 @@ export function ContactCTA() {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 rounded-full border border-accent-foreground/40 px-6 py-3.5 text-base font-semibold text-accent-foreground transition-colors hover:bg-accent-foreground/10"
           >
-            <MessageCircle className="size-5 text-[#25D366]" aria-hidden="true" />
+            <WhatsAppIcon className="size-5" aria-hidden="true" />
             {t.cta.whatsapp}
           </a>
           <a

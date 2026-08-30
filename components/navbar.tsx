@@ -1,8 +1,9 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Menu, X, MessageCircle } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { useLanguage } from "@/components/language-provider"
+import { WhatsAppIcon } from "@/components/whatsapp-icon"
 import { LanguageSwitcher } from "@/components/language-switcher"
 import { WHATSAPP_URL } from "@/lib/i18n"
 import { cn } from "@/lib/utils"
@@ -112,7 +113,7 @@ export function Navbar() {
             rel="noopener noreferrer"
             className="hidden items-center gap-2 rounded-full border border-background/30 bg-background/10 px-4 py-2 text-sm font-semibold text-background backdrop-blur-sm transition-colors hover:bg-background/20 md:inline-flex"
           >
-            <MessageCircle className="size-4 text-[#25D366]" aria-hidden="true" />
+            <WhatsAppIcon className="size-4 text-accent" aria-hidden="true" />
             {t.nav.quote}
           </a>
 
@@ -163,7 +164,7 @@ export function Navbar() {
               onClick={close}
               className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2.5 text-sm font-semibold text-foreground transition-colors duration-200 hover:bg-card/80"
             >
-              <MessageCircle className="size-4 text-[#25D366]" aria-hidden="true" />
+              <WhatsAppIcon className="size-4 text-accent" aria-hidden="true" />
               {t.nav.quote}
             </a>
           </div>

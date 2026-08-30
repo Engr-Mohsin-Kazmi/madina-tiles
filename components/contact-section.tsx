@@ -1,7 +1,8 @@
 "use client"
 
-import { Phone, MessageCircle, MapPin } from "lucide-react"
+import { Phone, MapPin } from "lucide-react"
 import { useLanguage } from "@/components/language-provider"
+import { WhatsAppIcon } from "@/components/whatsapp-icon"
 import { Reveal } from "@/components/reveal"
 import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL } from "@/lib/i18n"
 
@@ -48,8 +49,8 @@ export function ContactSection() {
             rel="noopener noreferrer"
             className="flex flex-col items-center gap-3 rounded-xl border border-border bg-card p-6 text-center transition-all duration-200 hover:border-accent/50 hover:bg-card/80"
           >
-            <span className="grid size-12 place-items-center rounded-full bg-accent/10 text-[#25D366]">
-              <MessageCircle className="size-6" aria-hidden="true" />
+            <span className="grid size-12 place-items-center rounded-full bg-accent/10 text-accent">
+              <WhatsAppIcon className="size-6" aria-hidden="true" />
             </span>
             <span className="text-sm font-medium text-muted-foreground">
               {t.contact.whatsappLabel}
@@ -80,7 +81,7 @@ export function ContactSection() {
             rel="noopener noreferrer"
             className="inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-border bg-card px-6 py-3.5 text-base font-semibold text-foreground transition-all duration-200 hover:bg-card/80"
           >
-            <MessageCircle className="size-5 text-[#25D366]" aria-hidden="true" />
+            <WhatsAppIcon className="size-5" aria-hidden="true" />
             {t.contact.whatsapp}
           </a>
           <a

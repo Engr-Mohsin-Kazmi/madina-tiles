@@ -1,8 +1,9 @@
 "use client"
 
 import Image from "next/image"
-import { MessageCircle, ArrowRight } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { useLanguage } from "@/components/language-provider"
+import { WhatsAppIcon } from "@/components/whatsapp-icon"
 import { WHATSAPP_URL } from "@/lib/i18n"
 
 export function Hero() {
@@ -51,8 +52,8 @@ export function Hero() {
               rel="noopener noreferrer"
               className="group inline-flex items-center justify-center gap-2 rounded-full border border-background/30 bg-background/10 px-6 py-3.5 text-base font-semibold text-background backdrop-blur-sm transition-colors hover:bg-background/20"
             >
-              <MessageCircle
-                className="size-5 text-[#25D366]"
+              <WhatsAppIcon
+                className="size-5 text-accent"
                 aria-hidden="true"
               />
               {t.hero.whatsapp}

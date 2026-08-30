@@ -1,7 +1,8 @@
 "use client"
 
-import { Phone, MessageCircle, MapPin } from "lucide-react"
+import { Phone } from "lucide-react"
 import { useLanguage } from "@/components/language-provider"
+import { WhatsAppIcon } from "@/components/whatsapp-icon"
 import { LanguageSwitcher } from "@/components/language-switcher"
 import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL } from "@/lib/i18n"
 
@@ -75,12 +76,12 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2.5 text-primary-foreground/80 transition-colors hover:text-accent"
                 >
-                  <MessageCircle className="size-4 shrink-0 text-[#25D366]" aria-hidden="true" />
+                  <WhatsAppIcon className="size-4 shrink-0 text-accent" aria-hidden="true" />
                   <span dir="ltr">WhatsApp {PHONE_DISPLAY}</span>
                 </a>
               </li>
               <li className="inline-flex items-center gap-2.5 text-primary-foreground/80">
-                <MapPin className="size-4 shrink-0" aria-hidden="true" />
+                <Phone className="size-4 shrink-0" aria-hidden="true" />
                 {t.contact.location}
               </li>
             </ul>

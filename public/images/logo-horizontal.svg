@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 70" fill="none">
+  <!-- Emblem (40x67 scaled) -->
+  <g transform="translate(10, 5) scale(0.44)">
+    <polygon points="40,0 60,11 40,22 20,11" fill="#F3EAE1" />
+    <polygon points="40,24 80,45.5 40,67 0,45.5" fill="#E7D6C4" />
+    <polygon points="40,58 80,79.5 40,101 0,79.5" fill="#D6B999" />
+    <polygon points="40,58 47.62,62.5 40,67 32.38,62.5" fill="#CFB089" />
+    <polygon points="40,92 80,113.5 40,135 0,113.5" fill="#C6A175" />
+  </g>
+  <!-- Text -->
+  <text x="60" y="37" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#2B2724" letter-spacing="-0.02em">Madina Tile Works</text>
+  <text x="60" y="54" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="600" fill="#8B7E74" letter-spacing="0.22em">MADINAH</text>
+</svg>

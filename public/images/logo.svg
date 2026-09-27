@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 135" fill="none" aria-hidden="true">
+  <!-- Diamond 1: Ivory / Cream Tile -->
+  <polygon points="40,0 60,11 40,22 20,11" fill="#F3EAE1" />
+  <!-- Diamond 2: Sand / Light Beige Tile -->
+  <polygon points="40,24 80,45.5 40,67 0,45.5" fill="#E7D6C4" />
+  <!-- Diamond 3: Warm Tan / Gold Tile -->
+  <polygon points="40,58 80,79.5 40,101 0,79.5" fill="#D6B999" />
+  <!-- Overlap Diamond: Translucent Intersection between D2 & D3 -->
+  <polygon points="40,58 47.62,62.5 40,67 32.38,62.5" fill="#CFB089" />
+  <!-- Diamond 4: Bronze / Terracotta Foreground Tile -->
+  <polygon points="40,92 80,113.5 40,135 0,113.5" fill="#C6A175" />
+</svg>

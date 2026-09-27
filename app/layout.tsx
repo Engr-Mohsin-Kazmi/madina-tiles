@@ -82,6 +82,15 @@ export const metadata: Metadata = {
       "Professional tile, ceramic, porcelain and marble installation in Madinah, Saudi Arabia.",
     images: ["/images/og-image.png"],
   },
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/icon-light-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
   robots: {
     index: true,
     follow: true,

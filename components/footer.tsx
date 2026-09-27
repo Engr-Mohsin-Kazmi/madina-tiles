@@ -4,6 +4,7 @@ import { Phone } from "lucide-react"
 import { useLanguage } from "@/components/language-provider"
 import { WhatsAppIcon } from "@/components/whatsapp-icon"
 import { LanguageSwitcher } from "@/components/language-switcher"
+import { TileLogo } from "@/components/tile-logo"
 import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL } from "@/lib/i18n"
 
 const NAV = [
@@ -23,12 +24,12 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2.5">
+            <div className="flex items-center gap-3">
               <span
-                className="grid size-9 place-items-center rounded-md border border-accent/40 bg-accent/10 text-sm font-bold text-accent"
+                className="grid size-10 place-items-center rounded-lg border border-accent/40 bg-accent/10 p-1"
                 aria-hidden="true"
               >
-                MT
+                <TileLogo className="h-7 w-auto drop-shadow-xs" />
               </span>
               <span className="text-lg font-bold">Madina Tile Works</span>
             </div>

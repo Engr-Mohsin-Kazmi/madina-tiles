@@ -10,6 +10,7 @@ const jsonLd = {
     "معلم بلاط وسيراميك بالمدينة المنورة، متخصص في تركيب البلاط والسيراميك والبورسلان والرخام. Professional tile, ceramic, porcelain and marble installation in Madinah, Saudi Arabia.",
   url: SITE_URL,
   telephone: "+966599082520",
+  logo: `${SITE_URL}/images/logo.png`,
   image: `${SITE_URL}/images/og-image.png`,
   priceRange: "$$",
   areaServed: {

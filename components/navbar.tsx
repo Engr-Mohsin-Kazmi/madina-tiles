@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react"
 import { useLanguage } from "@/components/language-provider"
 import { WhatsAppIcon } from "@/components/whatsapp-icon"
 import { LanguageSwitcher } from "@/components/language-switcher"
+import { TileLogo } from "@/components/tile-logo"
 import { WHATSAPP_URL } from "@/lib/i18n"
 import { cn } from "@/lib/utils"
 
@@ -50,20 +51,20 @@ export function Navbar() {
         <a
           href="#home"
           className={cn(
-            "flex items-center gap-2.5 transition-colors",
+            "group flex items-center gap-3 transition-colors",
             scrolled ? "text-foreground" : "text-background",
           )}
         >
           <span
             className={cn(
-              "grid size-9 place-items-center rounded-md border text-sm font-bold tracking-tight transition-colors",
+              "grid size-10 place-items-center rounded-lg border p-1 transition-all duration-200 group-hover:scale-105",
               scrolled
-                ? "border-accent/40 bg-accent/10 text-accent"
-                : "border-background/30 bg-background/10 text-background",
+                ? "border-accent/40 bg-accent/10 shadow-xs"
+                : "border-background/30 bg-background/10 backdrop-blur-xs",
             )}
             aria-hidden="true"
           >
-            MT
+            <TileLogo className="h-7 w-auto drop-shadow-xs" />
           </span>
           <span className="flex flex-col leading-none">
             <span className="font-sans text-base font-bold tracking-tight md:text-lg">
